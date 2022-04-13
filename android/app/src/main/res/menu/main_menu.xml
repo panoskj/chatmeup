@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_custom_layout"
+        app:actionLayout="@layout/item_menu_header"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:title="Profile" />
+
+    <item
+        android:title="CEID Public Chat" />
+
+    <item
+        android:title="Contacts" />
+
+    <item
+        android:title="Hobbies/Bio" />
+
+    <item
+        android:title="Store" />
+
+    <item
+        android:title="Donations/Subscriptions" />
+
+    <item
+        android:title="Settings" />
+
+</menu>
