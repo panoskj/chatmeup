@@ -4,4 +4,5 @@
     <string name="hyperlinkAgreeTo">I agree to the <a href="#">Terms of Services</a> and <a href="#">Privacy Policy</a></string>
     <string name="hyperlinkForgotPassword"><a href="#">Forgot password?</a></string>
     <string name="hyperlinkSignUp"><a href="#">Sign Up</a></string>
+    <string name="hyperlinkAddContact">Add a new contact <a href="#">+</a></string>
 </resources>
