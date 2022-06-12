@@ -1,4 +1,4 @@
 package com.chatmeup.chatmeup.models;
 
-public class Key {
+public class Moderator {
 }
