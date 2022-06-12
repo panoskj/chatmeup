@@ -17,7 +17,7 @@ public class PrivateChat extends EncryptedChat {
     /*
      * Chatroom constructor
      */
-    public PrivateChat(long chatId, SharedKey sharedKey, String name, String friendEmail) {
+    public PrivateChat(String chatId, SharedKey sharedKey, String name, String friendEmail) {
         super(chatId, sharedKey);
         dateLastUsed = System.currentTimeMillis() / 1000;		//Set the time that the chat was used last to the current UNIX Epoch time
         messages = new ArrayList<>();

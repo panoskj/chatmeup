@@ -17,7 +17,7 @@ public class GroupChat extends EncryptedChat {
 
     private int member_count = 0; // number of members in groupChat
 
-    public GroupChat(long chatId, SharedKey sharedKey, String groupName, String groupID) {
+    public GroupChat(String chatId, SharedKey sharedKey, String groupName, String groupID) {
         super(chatId, sharedKey);
         this.groupName = groupName;
         this.groupID = groupID;
