@@ -1,6 +1,8 @@
 package com.chatmeup.chatmeup.models;
 
 
+import com.chatmeup.chatmeup.models.chats.VerifiedClassChat;
+
 public class Professor {
 
     public final long professorId;
@@ -13,4 +15,10 @@ public class Professor {
     }
 
 
+    public void CreateVerifiedChat(){
+    }
+
+    public boolean DeleteVerifiedChat(VerifiedClassChat A){
+       return false;
+    }
 }

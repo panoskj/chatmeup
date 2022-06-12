@@ -8,9 +8,10 @@ import java.util.Date;
 import java.util.LinkedList;
 
 public class GroupChat extends EncryptedChat {
-    private String groupName;
-    private String groupID;
+    protected String groupName;
+    private GroupChat groupID;
     private String encryptedSharedKey;
+    public String groupPwd;
     protected LinkedList<String> messages;	//List of text messages that have been sent by users to the chatroom and are displayed in the chatroom
     protected Date dateLastUsed;		//The last time the chatroom was joined or had a message sent to it
     protected LinkedList<User> users;	//The clients/users that are currently in the chat
@@ -18,7 +19,7 @@ public class GroupChat extends EncryptedChat {
 
     private int member_count = 0; // number of members in groupChat
 
-    public GroupChat(String chatId, SharedKey sharedKey, String groupName, String groupID) {
+    public GroupChat(String chatId, SharedKey sharedKey, String groupName, GroupChat groupID) {
         super(chatId, sharedKey);
         this.groupName = groupName;
         this.groupID = groupID;
@@ -32,5 +33,17 @@ public class GroupChat extends EncryptedChat {
         query = query.toLowerCase();
 
         return groupName.toLowerCase().contains(query);
+    }
+
+
+
+
+    public void SetGroupPwd(String groupPassword) {
+        this.groupPwd = groupPassword;
+    }
+
+
+    public void SetGroupName(String Name){
+        this.groupName=Name;
     }
 }
