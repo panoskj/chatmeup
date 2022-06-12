@@ -26,4 +26,5 @@ public void addToCart(String productID, double price, int quantity)
     public double getProductPrice() {
         return this.price;
     }
-}
+public void removeFromCart(){
+        }

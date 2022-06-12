@@ -14,11 +14,8 @@ public void viewAllProducts(){
         }
 
 
-         viewNotOwned() : productList
+public void viewNotOwned(){}
+public void productSearch(){}
+public void searchResults(){}
 
-         productSearch() : productID
-
-         searchResults() : productList
-
-         item() : productID//
 
