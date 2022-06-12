@@ -9,9 +9,9 @@ public class Message {
     public final User sender;
     public final User receiver;
     public final Date destroyAfter;
-    public final long chatId;
+    public final String chatId;
 
-    public Message(EncryptedMessage encryptedMessage, long groupChatId) {
+    public Message(EncryptedMessage encryptedMessage, String groupChatId) {
         this.sender = encryptedMessage.sender;
         this.receiver = encryptedMessage.receiver;
         this.destroyAfter = encryptedMessage.destroyAfter;

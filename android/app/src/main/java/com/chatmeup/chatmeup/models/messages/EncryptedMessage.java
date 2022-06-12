@@ -10,10 +10,10 @@ public class EncryptedMessage {
     public final User sender;
     public final User receiver;
     public final Date destroyAfter;
-    public final long chatId;
+    public final String chatId;
     public final byte[] messageContent;
 
-    public EncryptedMessage(User sender, User receiver, Date destroyAfter, long chatId, byte[] messageContent) {
+    public EncryptedMessage(User sender, User receiver, Date destroyAfter, String chatId, byte[] messageContent) {
         this.sender = sender;
         this.receiver = receiver;
         this.destroyAfter = destroyAfter;
