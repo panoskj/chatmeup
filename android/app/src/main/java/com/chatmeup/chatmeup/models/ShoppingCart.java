@@ -2,29 +2,28 @@ package com.chatmeup.chatmeup.models;
 
 import java.util.List;
 
-class Item {
+class Cart {
     private String productID;
     private int item_count;
-    private List<Products> unitPrice;
+    private List<Product> ProductList;
+    private int quantity;
+}
 
-    Item(String productName, int quantity, double unitPrice) {
-        this.productName = productName;
-        this.quantity = quantity;
-        this.unitPrice = unitPrice;
-    }
 
-    public String toString() {
-        String s = this.productName + ":";
-        s = s + this.quantity + "\n";
-        return s;
-    }
-    public String getProductName() {
-        return this.productName;
-    }
+public void addToCart(String productID, double price, int quantity)
+        {
+
+        Item temp = new Item(itemName, price, quantity);
+        totalPrice += (price * quantity);
+        itemCount += quantity;
+        cart[itemCount] = temp;
+
+        }
+
     public int getQuantity() {
         return this.quantity;
     }
-    public double getUnitPrice() {
-        return this.unitPrice;
+    public double getProductPrice() {
+        return this.price;
     }
 }
