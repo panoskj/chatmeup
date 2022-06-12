@@ -34,6 +34,7 @@ public class User {
     public List<Contact> requests;
     public List<Contact> contacts;
     public List<GroupChat> groupChats;
+    public List<User> blockedUsers;
     public PublicKey publicKey;
     public PrivateKey privateKey;
 
@@ -45,7 +46,7 @@ public class User {
 
     }
 
-    private boolean MatchesSearch(String query) {
+    public boolean MatchesSearch(String query) {
 
         query = query.toLowerCase();
 
@@ -55,9 +56,18 @@ public class User {
     }
 
     public List<Contact> SearchContacts(String query) {
+
         return contacts
                 .stream()
                 .filter(contact -> contact.user.MatchesSearch(query))
+                .collect(Collectors.toList());
+    }
+
+    public List<GroupChat> SearchGroups(String query) {
+
+        return groupChats
+                .stream()
+                .filter(groupChat -> groupChat.MatchesSearch(query))
                 .collect(Collectors.toList());
     }
 
@@ -127,5 +137,9 @@ public class User {
         PrivateChat newChat = new PrivateChat(chatId, new SharedKey(message), sender);
 
         requests.add(new Contact(message.sender, new Date(), newChat));
+    }
+
+    public boolean HasBlocked(User user) {
+        return blockedUsers.stream().anyMatch(u -> u.id == user.id);
     }
 }

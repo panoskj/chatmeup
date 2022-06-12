@@ -24,4 +24,12 @@ public class GroupChat extends EncryptedChat {
 
         member_count++; // increment static member_count of members in groupChat
     }
+
+
+    public boolean MatchesSearch(String query) {
+
+        query = query.toLowerCase();
+
+        return groupName.toLowerCase().contains(query);
+    }
 }
