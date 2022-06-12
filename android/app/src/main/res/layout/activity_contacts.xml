@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height = "match_parent" android:paddingLeft= "10dp"
+    android:paddingRight = "10dp"
+    android:paddingTop = "10dp"
+    android:paddingBottom = "10dp" tools:context = ".MainActivity">
+
+    <TextView
+        android:id="@+id/txtContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="Contacts"/>
+
+    <TextView
+        android:id="@+id/txtAddContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:text="@string/hyperlinkAddContact"/>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search Contacts"
+        android:iconifiedByDefault="false"
+        android:layout_below="@id/txtContacts"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_contact" />
+
+
+</RelativeLayout>
