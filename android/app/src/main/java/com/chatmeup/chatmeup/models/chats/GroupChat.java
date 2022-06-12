@@ -1,8 +1,12 @@
-package com.chatmeup.chatmeup.models;
+package com.chatmeup.chatmeup.models.chats;
+
+import com.chatmeup.chatmeup.models.Moderator;
+import com.chatmeup.chatmeup.models.User;
+import com.chatmeup.chatmeup.models.keys.SharedKey;
 
 import java.util.LinkedList;
 
-public class GroupChat {
+public class GroupChat extends EncryptedChat {
     private String groupName;
     private String groupID;
     private String encryptedSharedKey;
@@ -11,9 +15,10 @@ public class GroupChat {
     protected LinkedList<User> users;	//The clients/users that are currently in the chat
     protected LinkedList<Moderator> moderators;	//The moderators that are currently in the chat
 
-    private static int member_count = 0; // number of members in groupChat
+    private int member_count = 0; // number of members in groupChat
 
-    public GroupChat(String groupName, String groupID) {
+    public GroupChat(long chatId, SharedKey sharedKey, String groupName, String groupID) {
+        super(chatId, sharedKey);
         this.groupName = groupName;
         this.groupID = groupID;
 
