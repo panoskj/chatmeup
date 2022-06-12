@@ -17,12 +17,12 @@ public class PrivateChat extends EncryptedChat {
     /*
      * Chatroom constructor
      */
-    public PrivateChat(String chatId, SharedKey sharedKey, String name, String friendEmail) {
+    public PrivateChat(String chatId, SharedKey sharedKey, User friend) {
         super(chatId, sharedKey);
         dateLastUsed = System.currentTimeMillis() / 1000;		//Set the time that the chat was used last to the current UNIX Epoch time
         messages = new ArrayList<>();
-        this.friendEmail = friendEmail;
-        this.chat = name;
+        this.friendEmail = friend.email;
+        this.chat = friend.username;
     }
 
     /*
