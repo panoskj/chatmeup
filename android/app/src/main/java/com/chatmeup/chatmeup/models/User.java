@@ -109,16 +109,11 @@ public class User {
 
         User sender = encryptedMessage.sender;
 
-        if (chat == null && GetPrivateChat(sender) == null) {
+        if (chat == null) {
 
-            ProcessFriendRequest(encryptedMessage);
+            if (GetPrivateChat(sender) == null) ProcessFriendRequest(encryptedMessage);
         }
-        else {
-
-
-
-
-        }
+        else chat.AddMessage(encryptedMessage);
     }
 
     public void ProcessFriendRequest(EncryptedMessage encryptedMessage){
