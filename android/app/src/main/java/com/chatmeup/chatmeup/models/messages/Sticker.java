@@ -9,7 +9,7 @@ public class Sticker extends MediaFile{
         this.stickerID=stickerID;
     }
 
-    
+
 }
 
 
